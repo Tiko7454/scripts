@@ -1,0 +1,23 @@
+#!/bin/bash
+read number
+reversed=""
+
+if [[ $number -lt 0 ]]
+then
+    reversed="-"
+    number=$(( 0 - $number ))
+fi
+
+
+while [ $number != 0 ]
+do
+    reversed+=$(( $number % 10 ))
+    number=$(( $number / 10 ))
+done
+
+if [[ $reversed == "" ]]
+then
+    reversed=0
+fi
+
+echo $reversed
