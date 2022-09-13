@@ -1,0 +1,4 @@
+#!/bin/bash
+pwd $1
+echo 
+ls -R $1
