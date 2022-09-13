@@ -1,0 +1,14 @@
+echo "input file/dir name:"
+read filename
+
+#ls -l $filename | grep -o "^."
+
+file_is_dir=$(ls -ld $filename | grep -o "^.")
+
+if [[ $file_is_dir == "d" ]]
+then
+    echo "directory"
+elif [[ $file_is_dir == "-" ]]
+then
+    echo "file"
+fi
