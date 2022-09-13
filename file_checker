@@ -1,3 +1,4 @@
+#!/bin/bash
 echo "input file/dir name:"
 read filename
 
